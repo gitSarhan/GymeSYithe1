@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+    padding: 0;
+    margin:0;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+        body {
+            background: url(wall.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+
+        }
+
+        .freakeh {
+            height: 50pt;
+            width: 400pt;
+            border-radius: 100px;
+           background-color: transparent;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .freakeh button {
+            height: 100%;
+            width: 50%;
+            border-radius: 50px;
+            box-sizing: border-box;
+            color: white;
+            background-color: transparent;
+            border: none;
+            font-size: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .freakeh button:hover {
+            background-color: rgb(123, 14, 14);
+            transition: .6s;
+        }
+
+        .content {
+            display: none;
+            /* Add additional styling for your content */
+        }
+.all{
+     margin-top: 30px;
+}
+        .active {
+            display: block;
+        }
+
+        .content select {
+            width: 80%;
+            height: 50px;
+            margin-left: 10%;
+            margin-top: 30px;
+            background-color: rgba(0, 0, 0, 0.326);
+            color: rgb(123, 14, 14);
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+            font-weight:bolder;
+            border-radius: 50px;
+
+        }
+
+        .content select option {
+            text-align: center;
+            background-color: rgb(28, 26, 26);
+
+        }
+       select option:hover {
+            background-color: rgb(123, 14, 14);
+            color: gray;
+            
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="all">
+
+    
+    <div class="freakeh">
+        <button onclick="showContent('page1')"> Gym</button>
+        <button onclick="showContent('page2')"> Home</button>
+    </div>
+
+
+    <div id="page1" class="content">
+        <!-- Add your content for the first page here -->
+
+        <select name="muscle" id="muscle1" onchange="showMuscleContent('muscle1')">
+            <option value="choose" selected>Choose</option>
+            <option value="chest">Chest</option>
+            <option value="bicep">Bicep</option>
+            <option value="tricep">tricep</option>
+            <option value="shoulders">Shoulders</option>
+            <option value="back">Back</option>
+            <option value="legs">Legs</option>
+            <option value="abs">abs</option>
+        </select>
+        <div id="chest" class="muscle-content" style="display: none;">
+            <img src="classic-push-ups-unscreen.gif">
+            <img src="chest1-unscreen.gif" >
+           
+        </div>
+    </div>
+
+    <div id="page2" class="content">
+        <!-- Add your content for the second page here -->
+     
+        <select name="muscle" id="muscle2" onchange="showMuscleContent('muscle2')"> 
+            <option value="choose" selected>Choose</option>
+            <option value="chest">Chest</option>
+            <option value="bicep">Bicep</option>
+            <option value="tricep">tricep</option>
+            <option value="shoulders">Shoulders</option>
+            <option value="back">Back</option>
+            <option value="legs">Legs</option>
+            <option value="abs">abs</option>
+        </select>
+    
+    </div>
+
+    <script>
+        function showContent(pageId) {
+            var pages = document.getElementsByClassName('content');
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].style.display = 'none'; // Hide all pages
+            }
+            document.getElementById(pageId).style.display = 'block'; // Show the selected page
+        }
+        function Sele() {
+            document.getElementById("p").innerHTML = img
+
+        }
+
+        function showMuscleContent(selectId) {
+    var select = document.getElementById(selectId);
+    var value = select.value;
+
+    var contents = document.getElementsByClassName('muscle-content');
+    for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = 'none'; // Hide all muscle contents
+    }
+
+    if (value !== 'choose') {
+        document.getElementById(value).style.display = 'block'; // Show the selected muscle content
+    }
+}
+
+
+    </script>
+    </div>
+</body>
+
+</html>

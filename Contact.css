@@ -1,0 +1,376 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    background-image: url('tt.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+header {
+    position: absolute;
+    text-align: center;
+    width: 75%;
+    left: 12%;
+    top: 2rem;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+
+
+.content {
+    display: flex;
+    min-height: 80vh;
+    margin-top: -20px;
+
+}
+
+.content section {
+    margin-top: 8vh;
+    margin-left: 20vh;
+}
+
+.content-form {
+    margin-top: 7rem;
+}
+
+section i {
+    border-radius: 50%;
+    padding: 4px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    text-align: center;
+
+
+}
+
+.form {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 55%;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form .contact-form input {
+    width: 30rem;
+    background-color: transparent;
+    border: 0px;
+    border: transparent;
+    margin: 20px;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #fff;
+}
+
+.form .contact-form input~span {
+    position: absolute;
+    left: 20px;
+    transition: 0.9s ease-in-out;
+    margin-top: 10px;
+}
+
+.form .contact-form input:focus~span {
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.form .contact-form textarea {
+    width: 30rem;
+    border: 0px;
+    background-color: transparent;
+    margin: 20px;
+    font-size: 17px;
+    border-bottom: 2px solid white;
+}
+
+.form .contact-form textarea~span {
+    position: absolute;
+    left: 20px;
+    margin-top: 10px;
+    transition: 0.9s ease-in-out;
+}
+
+.form .contact-form textarea:focus~span {
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+
+.form .contact-form input[type=submit] {
+    background-color: rgb(123, 14, 14);
+    border: 2px solid rgb(123, 14, 14);
+    font-size: 15px;
+    width: 40%;
+
+
+
+}
+
+.form .contact-form input[type=submit]:hover {
+    background-color: transparent;
+    color: rgb(123, 14, 14);
+    transition: 0.4s;
+}
+
+.media {
+    position: absolute;
+    top: 85vh;
+    right: 20vh;
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+}
+.media li :hover{
+    color: rgb(123, 14, 14);
+    transition: 0.3s;
+}
+.media li {
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+    }
+
+    header {
+        position: absolute;
+        left: 0;
+        top: 10%;
+        width: 100%;
+    }
+
+
+    .form {
+        position: absolute;
+        top: 100vh;
+        margin-left: 20px;
+
+
+
+    }
+
+    .content-form {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1;
+        margin-top: 70vh;
+        width: 100%;
+
+
+    }
+
+    .content section {
+
+        margin-top: 0vh;
+        margin-left: 50px;
+    }
+
+    .media {
+        position: absolute;
+        top: 190vh;
+        left: 5%
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        background-size: auto 100vh;
+        /* Adjust background size */
+        background-position: center;
+        /* Keep background centered */
+
+    }
+
+    header {
+
+        width: 100%;
+
+        top: -25%;
+        display: block;
+        /* Center the header */
+    }
+
+    .content {
+        margin-top: 0px;
+        display: block;
+
+
+
+    }
+
+    .content section {
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .content section,
+    .form .contact-form input,
+    .form .contact-form textarea {
+        width: calc(100% - 40px);
+        /* Adjust width and center form elements */
+        margin: 10px 20px;
+        /* Add margin to maintain spacing */
+    }
+
+    .form {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        width: 100%;
+        min-height: auto;
+        height: auto;
+        /* Position form below the header */
+        transform: translateY(-30%);
+        /* Center the form vertically */
+        display: block;
+    }
+
+    .content-form {
+        margin-top: 200px;
+        /* Remove top margin */
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #btn {
+        margin-left: 5%;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .media {
+        left: 38%;
+        top: 160%;
+        
+      
+        
+
+    }
+    .media li{
+        margin-left: 45px;
+    }
+
+    .media i {
+        margin-right: -50px;
+        margin-bottom: 10px;
+
+
+    }
+}
+@media screen and (min-height: 1000px) {
+body{
+    background-position-y: 20%;
+}
+    .content{
+    margin-left: -18%;
+    margin-top: 25%;
+}
+header{
+    margin-top: -20%;
+}
+.form{
+    top: -30%;
+    left: -25%;
+}
+.form .right{
+   margin-top: 300px;
+}
+.media{
+    margin-top: -30%;
+}
+}
+@media screen and (min-height: 1000px) and (max-width:786px) {
+.content{
+   margin-left: 10%; 
+   margin-top: -35%;
+}
+header{
+    margin-top: 30%;
+}
+body{
+    background-position-y: 50%;
+}
+.form{
+    margin-top: 60%;
+    margin-left: 45%;
+    
+}
+.form .right{
+    margin-top: 640px;
+}
+.media{
+    margin-top: -95%;
+    margin-left: 45%;
+    
+}
+}
+@media screen and (max-width: 280px) {
+    body {
+       width: 70%;
+        /* Adjust background size */
+        background-position: center;
+        /* Keep background centered */
+
+    }
+    header{
+        margin-left: 40px;
+    }
+#btn{
+    width: 60%;
+}
+    .media{
+    margin-left: 40px;
+    font-size: 10px;
+}
+.media li{
+    margin-left: 30px;
+}
+}
+@media screen and (min-height: 730px) and (max-width:576px) {
+.form{
+    margin-top: -56%;
+}
+.media{
+   top: 118%;
+   font-size: 12px;
+  
+ 
+}
+#btn{
+margin-top: 20px;
+
+
+}
+
+}
+@media screen and (height: 720px) and (max-width:576px) {
+.media{
+    margin-left:50px;
+}
+.media li{
+    margin-left: 50px;
+}
+}
